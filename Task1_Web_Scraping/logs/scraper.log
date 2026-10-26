@@ -32,3 +32,9 @@
 2026-10-24 16:18:01,563 - INFO - CSV and JSON exports are ready.
 2026-10-24 16:18:01,564 - INFO - ================= Scraping Task Completed ===================
 
+2026-10-26 14:12:12,333 - ERROR - Unexpected error - Invalid Operation or Value Error
+Traceback (most recent call last):
+  File "E:\Python_for_Data_Engineering_&_Automation_Internship\Task1_Web_Scraping\scraper.py", line 87, in clean_price
+    return float(Decimal(cleaned))
+                 ~~~~~~~^^^^^^^^^
+decimal.InvalidOperation: [<class 'decimal.ConversionSyntax'>]
