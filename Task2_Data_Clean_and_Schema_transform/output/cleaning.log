@@ -1,0 +1,175 @@
+2026-10-27 16:51:37,492 - ERROR -Data Cleaning failed.
+Traceback (most recent call last):
+  File "E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\clean_data.py", line 343, in <module>
+    clean_data()
+    ~~~~~~~~~~^^
+  File "E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\clean_data.py", line 58, in clean_data
+     raise FileNotFoundError(
+    ...<2 lines>...
+    )
+FileNotFoundError: Dataset not found: E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\Online Retail.xlsx
+Place Online Retail.xlsx beside clean_data.py.
+
+
+2026-10-27 16:54:21,750 - INFO -Loaded 541909 rows.
+2026-10-27 16:54:27,172 - INFO -Rejected 2 invalid rows.
+2026-10-27 16:54:29,108 - INFO -Rejected 5268 exact duplicate rows.
+2026-10-27 16:54:31,423 - ERROR -Validation failed: ['UnitPrice is not numeric.']
+2026-10-27 16:54:31,424 - ERROR -Data Cleaning failed.
+Traceback (most recent call last):
+  File "E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\clean_data.py", line 343, in <module>
+    clean_data()
+    ~~~~~~~~~~^^
+  File "E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\clean_data.py", line 299, in clean_data
+    raise ValueError("Output validation failed. Check the quality report.")
+ValueError: Output validation failed. Check the quality report.
+
+
+2026-10-27 17:10:48,754 - INFO -Loaded 541909 rows.
+2026-10-27 17:10:54,866 - INFO -Rejected 2 invalid rows.
+2026-10-27 17:10:56,987 - INFO -Rejected 5268 exact duplicate rows.
+2026-10-27 17:11:03,745 - ERROR -Data Cleaning failed.
+Traceback (most recent call last):
+  File "E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\clean_data.py", line 343, in <module>
+    clean_data()
+    ~~~~~~~~~~^^
+  File "E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\clean_data.py", line 317, in clean_data
+    str(k): str(v) for k,v in df.types.items()
+                              ^^^^^^^^
+  File "E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\.venv\Lib\site-packages\pandas\core\generic.py", line 6434, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AttributeError: 'DataFrame' object has no attribute 'types'. Did you mean: 'dtypes'?
+
+
+2026-10-27 17:14:55,916 - INFO -Loaded 541909 rows.
+2026-10-27 17:15:03,819 - INFO -Rejected 2 invalid rows.
+2026-10-27 17:15:06,027 - INFO -Rejected 5268 exact duplicate rows.
+2026-10-27 17:15:13,051 - INFO -Cleaning completed successfully.
+2026-10-27 17:15:13,051 - INFO -Output saved to E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\output\cleaned_retail_data.csv
+
+======+++++=====+++++==== AFTER CODE UPDATED ======+++++=====+++++====
+
+2026-10-27 23:00:08 | INFO | ======================== RUN START | ID=E0138098 ========================
+2026-10-27 23:00:08 | INFO | STEP 01 | Load source data and check required columns
+2026-10-27 23:00:08 | ERROR | RUN FAILED | ID=E0138098
+Traceback (most recent call last):
+  File "E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\clean_data1.py", line 492, in main
+    run_pipeline(logger, run_id)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\clean_data1.py", line 421, in run_pipeline
+    df, source_info = load_source_data(logger)
+                      ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\clean_data1.py", line 119, in load_source_data
+    raise FileNotFoundError(
+    ...<2 lines>...
+    )
+FileNotFoundError: Dataset not found: E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\Online Retail.xlsx
+Place 'Online Retail.xlsx' beside clean_data.py.
+2026-10-27 23:00:08 | INFO | RUN END (FAILED) | ID=E0138098
+
+2026-10-27 23:04:04 | INFO | ======================== RUN START | ID=96090FB9 ========================
+2026-10-27 23:04:04 | INFO | STEP 01 | Load source data and check required columns
+2026-10-27 23:04:04 | INFO | Reading source file: Online Retail.xlsx
+2026-10-27 23:05:41 | INFO | Source loaded successfully: 541,909 rows, 8 columns.
+2026-10-27 23:05:41 | INFO | STEP 02 | Standardize text fields
+2026-10-27 23:05:45 | INFO | Text fields standardized; surrounding whitespace removed.
+2026-10-27 23:05:45 | INFO | STEP 03 | Normalize types and separate invalid rows
+2026-10-27 23:05:51 | INFO | Type conversion complete: 2 invalid rows separated for review.
+2026-10-27 23:05:51 | INFO | Invalid-condition counts (overlap is possible): quantity=0, price=2, date=0, identifiers=0.
+2026-10-27 23:05:51 | INFO | STEP 04 | Remove exact duplicate records
+2026-10-27 23:05:54 | INFO | Exact duplicate removal complete: 5,268 duplicate rows removed.
+2026-10-27 23:05:54 | INFO | STEP 05 | Enforce output schema
+2026-10-27 23:05:55 | INFO | Output schema transformation complete.
+2026-10-27 23:05:55 | INFO | STEP 06 | Validate cleaned data
+2026-10-27 23:05:57 | INFO | Schema/data validation PASSED.
+2026-10-27 23:05:57 | INFO | STEP 07 | Write cleaned data, rejected rows and quality report
+2026-10-27 23:05:57 | ERROR | RUN FAILED | ID=96090FB9
+Traceback (most recent call last):
+  File "E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\clean_data1.py", line 492, in main
+    run_pipeline(logger, run_id)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\clean_data1.py", line 465, in run_pipeline
+    write_outputs(df, rejected, report, logger)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\clean_data1.py", line 380, in write_outputs
+    cleaned.to_csv(CLEAN_FILE, index=False)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\.venv\Lib\site-packages\pandas\core\generic.py", line 4026, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\.venv\Lib\site-packages\pandas\io\formats\format.py", line 1027, in to_csv
+    csv_formatter.save()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\.venv\Lib\site-packages\pandas\io\formats\csvs.py", line 251, in save
+    with get_handle(
+         ~~~~~~~~~~^
+        self.filepath_or_buffer,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        storage_options=self.storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as handles:
+    ^
+  File "E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\.venv\Lib\site-packages\pandas\io\common.py", line 939, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+PermissionError: [Errno 13] Permission denied: 'E:\\Python_for_Data_Engineering_&_Automation_Internship\\Task2_Data_Clean_and_Schema_transform\\output\\cleaned_retail_data.csv'
+2026-10-27 23:05:59 | INFO | RUN END (FAILED) | ID=96090FB9
+
+2026-10-27 23:08:10 | INFO | ======================== RUN START | ID=E880C49D ========================
+2026-10-27 23:08:10 | INFO | STEP 01 | Load source data and check required columns
+2026-10-27 23:08:10 | INFO | Reading source file: Online Retail.xlsx
+2026-10-27 23:09:38 | INFO | Source loaded successfully: 541,909 rows, 8 columns.
+2026-10-27 23:09:38 | INFO | STEP 02 | Standardize text fields
+2026-10-27 23:09:40 | INFO | Text fields standardized; surrounding whitespace removed.
+2026-10-27 23:09:40 | INFO | STEP 03 | Normalize types and separate invalid rows
+2026-10-27 23:09:42 | INFO | Type conversion complete: 2 invalid rows separated for review.
+2026-10-27 23:09:42 | INFO | Invalid-condition counts (overlap is possible): quantity=0, price=2, date=0, identifiers=0.
+2026-10-27 23:09:42 | INFO | STEP 04 | Remove exact duplicate records
+2026-10-27 23:09:44 | INFO | Exact duplicate removal complete: 5,268 duplicate rows removed.
+2026-10-27 23:09:44 | INFO | STEP 05 | Enforce output schema
+2026-10-27 23:09:44 | INFO | Output schema transformation complete.
+2026-10-27 23:09:45 | INFO | STEP 06 | Validate cleaned data
+2026-10-27 23:09:46 | INFO | Schema/data validation PASSED.
+2026-10-27 23:09:46 | INFO | STEP 07 | Write cleaned data, rejected rows and quality report
+2026-10-27 23:09:50 | INFO | Cleaned dataset saved: E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\output\cleaned_retail_data.csv
+2026-10-27 23:09:50 | INFO | Rejected-records file saved: E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\output\rejected_records.csv
+2026-10-27 23:09:50 | INFO | Data quality report saved: E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\output\data_quality_report.json
+2026-10-27 23:09:50 | INFO | Run summary: input=541,909, cleaned=536,639, rejected=2, duplicates_removed=5,268.
+2026-10-27 23:09:50 | INFO | RUN COMPLETED SUCCESSFULLY | ID=E880C49D | duration=100.32 seconds
+2026-10-27 23:09:50 | INFO | RUN END | ID=E880C49D
+
+2026-10-28 22:01:49 | INFO | ======================== RUN START | ID=EE5A33E0 ========================
+2026-10-28 22:01:49 | INFO | STEP 01 | Load source data and check required columns
+2026-10-28 22:01:49 | INFO | Reading source file: Online Retail.xlsx
+2026-10-28 22:03:38 | INFO | Source loaded successfully: 541,909 rows, 8 columns.
+2026-10-28 22:03:38 | INFO | STEP 02 | Standardize text fields
+2026-10-28 22:03:41 | INFO | Text fields standardized; surrounding whitespace removed.
+2026-10-28 22:03:41 | INFO | STEP 03 | Normalize types and separate invalid rows
+2026-10-28 22:03:44 | INFO | Type conversion complete: 2 invalid rows separated for review.
+2026-10-28 22:03:44 | INFO | Invalid-condition counts (overlap is possible): quantity=0, price=2, date=0, identifiers=0.
+2026-10-28 22:03:44 | INFO | STEP 04 | Remove exact duplicate records
+2026-10-28 22:03:46 | INFO | Exact duplicate removal complete: 5,268 duplicate rows removed.
+2026-10-28 22:03:46 | INFO | STEP 05 | Enforce output schema
+2026-10-28 22:03:49 | INFO | Output schema transformation complete.
+2026-10-28 22:03:49 | INFO | STEP 06 | Validate cleaned data
+2026-10-28 22:03:50 | INFO | Schema/data validation PASSED.
+2026-10-28 22:03:50 | INFO | STEP 07 | Write cleaned data, rejected rows and quality report
+2026-10-28 22:03:54 | INFO | Cleaned dataset saved: E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\output\cleaned_retail_data.csv
+2026-10-28 22:03:54 | INFO | Rejected-records file saved: E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\output\rejected_records.csv
+2026-10-28 22:03:54 | INFO | Data quality report saved: E:\Python_for_Data_Engineering_&_Automation_Internship\Task2_Data_Clean_and_Schema_transform\output\data_quality_report.json
+2026-10-28 22:03:54 | INFO | Run summary: input=541,909, cleaned=536,639, rejected=2, duplicates_removed=5,268.
+2026-10-28 22:03:55 | INFO | RUN COMPLETED SUCCESSFULLY | ID=EE5A33E0 | duration=125.76 seconds
+2026-10-28 22:03:55 | INFO | RUN END | ID=EE5A33E0
+

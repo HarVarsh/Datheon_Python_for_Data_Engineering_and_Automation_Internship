@@ -1,0 +1,71 @@
+{
+    "run_id": "EE5A33E0",
+    "started_at": "2026-10-28T22:01:49",
+    "currency": "GBP",
+    "steps": {
+        "load_and_source_schema_check": "completed",
+        "text_standardization": "completed",
+        "type_conversion_and_rejection": {
+            "invalid_quantity_rows": 0,
+            "invalid_price_rows": 2,
+            "invalid_date_rows": 0,
+            "missing_identifier_rows": 0,
+            "rows_rejected": 2
+        },
+        "duplicate_removal": "completed",
+        "output_schema_transformation": "completed",
+        "output_export": "completed"
+    },
+    "validation_errors": [],
+    "input_file": "Online Retail.xlsx",
+    "rows_before_cleaning": 541909,
+    "columns": [
+        "InvoiceNo",
+        "StockCode",
+        "Description",
+        "Quantity",
+        "InvoiceDate",
+        "UnitPrice",
+        "CustomerID",
+        "Country"
+    ],
+    "unexpected_columns_removed": [],
+    "nulls_before_cleaning": {
+        "InvoiceNo": 0,
+        "StockCode": 0,
+        "Description": 1454,
+        "Quantity": 0,
+        "InvoiceDate": 0,
+        "UnitPrice": 0,
+        "CustomerID": 135080,
+        "Country": 0
+    },
+    "exact_duplicate_rows_removed": 5268,
+    "schema_validation": "PASS",
+    "status": "SUCCESS",
+    "rows_after_cleaning": 536639,
+    "rows_rejected": 2,
+    "nulls_after_cleaning": {
+        "InvoiceNo": 0,
+        "StockCode": 0,
+        "Description": 0,
+        "Quantity": 0,
+        "InvoiceDate": 0,
+        "UnitPrice": 0,
+        "CustomerID": 135035,
+        "Country": 0
+    },
+    "output_file": "cleaned_retail_data.csv",
+    "rejected_file": "rejected_records.csv",
+    "output_dtypes": {
+        "InvoiceNo": "string",
+        "StockCode": "string",
+        "Description": "string",
+        "Quantity": "int64",
+        "InvoiceDate": "object",
+        "UnitPrice": "float64",
+        "CustomerID": "string",
+        "Country": "string"
+    },
+    "output_currency": "GBP"
+}
