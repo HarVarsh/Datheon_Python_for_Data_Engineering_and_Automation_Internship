@@ -1,0 +1,11 @@
+ONLINE RETAIL DATASET INSPECTION REPORT
+=======================================================
+
+Total Records: 541909
+Unique Customers: 4372
+Unique Products: 4070
+Unique Invoices: 25900
+Missing CustomerID Records: 135080
+Negative Quantity Records: 10624
+Duplicate Occurrences: 5268
+Rows Involved in Duplicate Groups: 10147

@@ -1,0 +1,20 @@
+TASK 3 - DATABASE VERIFICATION
+
+1. Table Record Counts
+Customers: 4372
+Products: 4070
+Sales Transactions: 541909
+
+2. Duplicate Transaction Check
+Result: 0 rows 
+
+3. Foreign Key Check
+Result: 0 rows 
+
+4. Missing CustomerID
+Count: 135080
+
+5. Negative Quantity
+Count: 10624
+
+Verification Date: 18-11-2026
