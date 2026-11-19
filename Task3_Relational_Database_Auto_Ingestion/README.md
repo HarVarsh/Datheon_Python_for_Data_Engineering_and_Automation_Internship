@@ -227,13 +227,13 @@ The following checks were performed:
 
 | Verification | Actual result |
 |---|---|
-| Customer records | [4372] |
-| Product records | [4070] |
-| Sales transactions | [541909] |
-| Duplicate transaction IDs | [0] |
-| Foreign key violations | [0] |
-| Idempotency | [Pass] |
-| Transaction rollback | [Pass] |
+| Customer records | 4372 |
+| Product records | 4070 |
+| Sales transactions | 541909 |
+| Duplicate transaction IDs | 0 |
+| Foreign key violations | 0 |
+| Idempotency | Pass |
+| Transaction rollback | Pass |
 
 ## 12. Idempotency Testing
 
