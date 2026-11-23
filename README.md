@@ -106,7 +106,6 @@ Python_for_Data_Engineering_&_Automation_Internship/
         └── test_rollback.py
 ```
 
-*Note: The structure above is an illustrative overview. Actual files and folders may differ depending on the implementation and repository exclusions.*
 
 ## Skills Developed
 
